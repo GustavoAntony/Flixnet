@@ -10,7 +10,7 @@ from functions import *
 df = pd.read_csv("ratings_small.csv")
 
 #Cria a matriz inicial
-A = df.pivot_table(index='userId', columns='movieId', values='rating').fillna(0)
+A = df.pivot_table(index='userId', columns='movieId', values='rating').fillna(2.5)
 A = A.values
 
 erros = []
@@ -18,17 +18,17 @@ erros = []
 
 
 
-for i in range(100):
+for i in range(5):
+    print(i)
     #Introduz o ruido
-    matriz_com_ruido, coordenada_ruido = introduzRuido(A,1)
+    B = copy.deepcopy(A)
+    B, coordenada_ruido = introduzRuido(B,1)
     coordenada_ruido = coordenada_ruido[0]
     
-    #Cria a matriz sem NaN's
-    B = copy.deepcopy(matriz_com_ruido)
 
     u, s, vt = svd(B)
 
-    u_, s_, vt_ = comprimir(u,s,vt,10)
+    u_, s_, vt_ = comprimir(u,s,vt,100)
     B2 = u_ @ np.diag(s_) @ vt_ 
 
 
@@ -43,7 +43,7 @@ df_erros = pd.DataFrame({
 })
 
 
-df_erros.to_csv("erros2.csv", index=False)
+df_erros.to_csv("erros_muitostress.csv", index=False)
 
 
 
