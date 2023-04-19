@@ -12,7 +12,7 @@ def comprimir (u, s, vt, K):
 
 def introduzRuido(matriz, num_ruidos):
     # verificando todos os campos que são diferentes de NaN
-    coordenadas = list(np.argwhere(matriz != 0))
+    coordenadas = list(np.argwhere(matriz != 2.5))
     lista_ruidos_colocados = []
     for i in range(num_ruidos):
         if len(coordenadas) >= 1:

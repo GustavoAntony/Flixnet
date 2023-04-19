@@ -10,7 +10,7 @@ from functions import *
 df = pd.read_csv("ratings_small.csv")
 
 #Cria a matriz inicial
-A = df.pivot_table(index='userId', columns='movieId', values='rating').fillna(0)
+A = df.pivot_table(index='userId', columns='movieId', values='rating').fillna(2.5)
 A = A.values
 
 erros = []
@@ -18,7 +18,7 @@ erros = []
 
 
 
-for i in range(100):
+for i in range(5):
     print(i)
     #Introduz o ruido
     B = copy.deepcopy(A)
@@ -43,7 +43,7 @@ df_erros = pd.DataFrame({
 })
 
 
-df_erros.to_csv("erros_gu3.csv", index=False)
+df_erros.to_csv("erros_muitostress.csv", index=False)
 
 
 
