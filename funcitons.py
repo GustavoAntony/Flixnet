@@ -15,7 +15,8 @@ def introduzRuido(dataframe_inicial, num_ruidos):
             lista_ruidos_colocados.append(campos_nao_nulos[n])
             campos_nao_nulos.pop(n)
             dataframe_inicial.loc[cord[0],cord[1]] = randint(0,5)
-    return dataframe_inicial
+
+    return dataframe_inicial, lista_ruidos_colocados
 
     # lista_random = [randint(0,len(campos_nao_nulos)) for i in range(num_ruidos)]
     # for rd in lista_random:
@@ -25,9 +26,9 @@ def introduzRuido(dataframe_inicial, num_ruidos):
     # inserindo os novos valores nas coordenadas selecionadas
 
 
-data = {'coluna1': ['A', 'A', 'B', 'B'], 'coluna2': ['x', 'y', 'x', 'y'], 'valor': [1, 2, 3, 4]}
-df = pd.DataFrame(data).pivot(index='coluna1', columns='coluna2', values='valor')
-print(df)
+# data = {'coluna1': ['A', 'A', 'B', 'B'], 'coluna2': ['x', 'y', 'x', 'y'], 'valor': [1, 2, 3, 4]}
+# df = pd.DataFrame(data).pivot(index='coluna1', columns='coluna2', values='valor')
+# print(df)
 
-df = introduzRuido(df,2)
-print(df)
+# df = introduzRuido(df,2)
+# print(df)
