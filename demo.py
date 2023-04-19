@@ -7,10 +7,12 @@ def introduzRuido(dataframe_inicial, num_ruidos):
     # verificando todos os campos que são diferentes de NaN
     nao_nulos = dataframe_inicial.notnull().stack()
     campos_nao_nulos = nao_nulos[nao_nulos].index.tolist()
+    lista_ruidos_colocados = []
     for i in range(num_ruidos):
         if len(campos_nao_nulos) >= 1:
             n = randint(0,len(campos_nao_nulos)-1)
             cord = campos_nao_nulos[n]
+            lista_ruidos_colocados.append(campos_nao_nulos[n])
             campos_nao_nulos.pop(n)
             dataframe_inicial.loc[cord[0],cord[1]] = randint(0,5)
     return dataframe_inicial
