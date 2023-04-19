@@ -19,16 +19,16 @@ erros = []
 
 
 for i in range(100):
+    print(i)
     #Introduz o ruido
-    matriz_com_ruido, coordenada_ruido = introduzRuido(A,1)
+    B = copy.deepcopy(A)
+    B, coordenada_ruido = introduzRuido(B,1)
     coordenada_ruido = coordenada_ruido[0]
     
-    #Cria a matriz sem NaN's
-    B = copy.deepcopy(matriz_com_ruido)
 
     u, s, vt = svd(B)
 
-    u_, s_, vt_ = comprimir(u,s,vt,10)
+    u_, s_, vt_ = comprimir(u,s,vt,100)
     B2 = u_ @ np.diag(s_) @ vt_ 
 
 
@@ -43,7 +43,7 @@ df_erros = pd.DataFrame({
 })
 
 
-df_erros.to_csv("erros2.csv", index=False)
+df_erros.to_csv("erros_gu3.csv", index=False)
 
 
 
