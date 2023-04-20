@@ -11,7 +11,7 @@ Primeiramente é necessário realizar a clonagem do repositório por meio do com
  * copy
  * scipy
 
-- Obs.: Para realizar a instalação de maneira automatizada basta rodar o comando pip install -r requiriments.txt na raiz do projeto. 
+- Obs.: Para realizar a instalação de maneira automatizada basta rodar o comando pip install -r requirements.txt na raiz do projeto. 
 
 ### Execução:
 
