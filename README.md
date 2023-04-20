@@ -77,7 +77,7 @@ Para escolher o valor de K adequado, é possível desconsiderar os valores muito
 
 ## Teste de Stress :
 
-Foi realizado um teste de stress, no qual comparou-se o histograma gerado pelos erros obtidos após a inserção de um único dado aleatório na matriz inicial de usuários por filmes com o histograma gerado após a inserção de 50000 dados aleatórios nessa mesma matriz. Para calcular o erro no segundo histograma, foi realizado o cálculo dos erros de cada ponto modificado pelos dados "estragados", sendo aplicada uma média nesses dados de erro, a fim de obter um único número representando a média dos erros para cada iteração. Os histogramas obtidos estão sendo mostrados no código do demo.ipynb e também está salvo com o nome "Teststress.png" nos arquivos desse repositório. 
+Foi realizado um teste de stress, no qual comparou-se o histograma gerado pelos erros obtidos após a inserção de um único dado aleatório na matriz inicial de usuários por filmes com o histograma gerado após a inserção de 50000 dados aleatórios , valor que representa metade das notas passíveis a essa mudança, nessa mesma matriz. Para calcular o erro no segundo histograma, foi realizado o cálculo dos erros de cada ponto modificado pelos dados "estragados", sendo aplicada uma média nesses dados de erro, a fim de obter um único número representando a média dos erros para cada iteração. Os histogramas obtidos estão sendo mostrados no código do demo.ipynb e também está salvo com o nome "Teststress.png" nos arquivos desse repositório. 
 
 
 ### Análise do teste :
