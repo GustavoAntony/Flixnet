@@ -66,7 +66,7 @@ Nesse contexto, a nota desconhecida de um usuário pode ser considerada um ruíd
 ### Estimativa dos K valores :
 
 
-Para realizar a compressão de uma imagem utilizando a decomposição em valores singulares (SVD), é necessário selecionar os primeiros K autovalores da matriz diagonal $\Sigma$ e recompor a matriz com esses novos valores para obter a "imagem" comprimida. No entanto, para uma boa estimativa, é importante selecionar cuidadosamente os valores de K a serem considerados para a recomposição da matriz.
+Para realizar a compressão de uma imagem utilizando a decomposição em valores singulares (SVD), é necessário selecionar os primeiros K autovalores da matriz diagonal $\Sigma$ e recompor a matriz com esses novos valores para obter a matriz "comprimida". No entanto, para uma boa estimativa, é importante selecionar cuidadosamente os valores de K a serem considerados para a recomposição da matriz.
 
 Uma análise dos valores de $\Sigma$ pode ser útil nesse processo, permitindo identificar quais autovalores são menos relevantes para a "imagem" original com ruído e podem ser descartados na recomposição da imagem. Ao selecionar um valor adequado para K, é possível realizar a compressão sem perder informações importantes da imagem e reduzir o ruído, buscando aproximar-se do valor real da "imagem".
 
